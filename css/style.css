@@ -1,0 +1,949 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Using semantic elements only - no classes or IDs in selectors */
+body > * {
+    padding: 20px 5%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background-color: transparent;
+    background-image: 
+        linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+        url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 5%;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Logo container with semi-transparent background */
+header div.logo {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header div img {
+    max-width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Header text with enhanced visibility */
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.8em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation styles */
+nav {
+    background-color: #34495e;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+/* Logo in navigation */
+.nav-logo {
+    flex: 0 0 auto;
+    margin-right: auto;
+}
+
+.nav-logo img {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Navigation list */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+nav a i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+nav a:hover i {
+    transform: scale(1.2);
+}
+
+/* Section styles */
+section {
+    min-height: 70vh;
+    padding: 10px 5%;
+    scroll-margin-top: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    position: relative;
+    background-color: transparent;
+}
+
+/* Add margin after home section */
+section#home {
+    margin-bottom: 10px;
+}
+
+/* Add margin before products section */
+section#products {
+    margin-top: 10px;
+}
+
+/* First section margin adjustment */
+section:first-of-type {
+    margin-top: 0;
+}
+
+/* Last section margin adjustment */
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Alternating section backgrounds */
+section:nth-child(odd) {
+    background-color: transparent;
+}
+
+section + section {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+section + section + section {
+    background-color: transparent;
+    color: #333;
+    text-shadow: none;
+}
+
+section + section + section + section {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+section > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Heading styles */
+section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 0 0 40px 0;
+    font-size: 2.2em;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+/* Dark section heading */
+section + section h2, section + section + section + section h2 {
+    color: white;
+    border-bottom-color: #f1c40f;
+}
+
+/* Content container */
+section > div {
+    padding: 20px 15px;
+    margin-bottom: 40px;
+}
+
+/* Light section container */
+section > div, section + section + section > div {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Content spacing */
+section > div > * {
+    margin-bottom: 40px;
+}
+
+section > div > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Service list styles */
+section ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+section ul li {
+    display: inline-block;
+    width: 45%;
+    margin: 0 20px 2px 0;
+    padding-left: 40px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+section ul li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    margin-left: -15px;
+    padding-right: 5px;
+    font-size: 1.2em;
+}
+
+/* Dark section bullet points */
+section + section ul li:before, section + section + section + section ul li:before {
+    color: #f1c40f;
+}
+
+/* Children focus box */
+section div div {
+    background-color: #d6eaf8;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+    border: 1px solid #a9cce3;
+}
+
+section div div h3 {
+    color: #2980b9;
+    margin: 0 0 15px 0;
+}
+
+/* Dark section focus box */
+section + section div div, section + section + section + section div div {
+    background-color: rgba(214, 234, 248, 0.9);
+    color: #333;
+    text-shadow: none;
+}
+
+/* Hours heading */
+section div div div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border: none;
+}
+
+/* Hours row styles */
+section div div div div {
+    display: block;
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    text-align: left;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+section div div div div:last-child {
+    border-bottom: none;
+}
+
+/* Day and time spans */
+section div div div div span {
+    display: inline-block;
+    color: #333;
+    text-shadow: none;
+    vertical-align: middle;
+}
+
+section div div div div span:first-child {
+    font-weight: bold;
+    width: 60%;
+}
+
+section div div div div span:last-child {
+    width: 40%;
+    text-align: right;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 5%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Scroll to top button */
+body > a {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #3498db;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+body > a:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 30px 5%;
+        min-height: auto;
+        margin: 0;
+    }
+    
+    section#home {
+        margin-bottom: 15px;
+    }
+    
+    section#products {
+        margin-top: 15px;
+    }
+    
+    section ul {
+        padding: 0;
+        margin: 0;
+    }
+    
+    section ul li {
+        width: 100%;
+        margin: 0 0 2px 0;
+    }
+    
+    section > div {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    
+    section h2 {
+        margin-bottom: 30px;
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    
+    .nav-logo {
+        margin: 0 0 15px 0;
+    }
+    
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    nav a i {
+        margin-right: 5px;
+    }
+    
+    section h2 {
+        font-size: 2em;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    section div div div div span {
+        display: block;
+        width: 100% !important;
+        text-align: left !important;
+    }
+    
+    section div div div div span:last-child {
+        margin-top: 5px;
+        font-size: 0.9em;
+    }
+    
+    header {
+        padding: 80px 5%;
+        min-height: 300px;
+    }
+    
+    header div.logo {
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+    }
+    
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    header p {
+        font-size: 1.1em;
+    }
+}
+
+/* Product container */
+.product-container {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Product items */
+.product-item {
+    display: inline-block;
+    width: 45%;
+    margin: 10px 2%;
+    vertical-align: top;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Product images */
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Product info */
+.product-info {
+    padding: 20px;
+    padding-right: 30px;
+}
+
+.product-info h3 {
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+}
+
+.product-info p {
+    margin: 0;
+    margin-right: 30px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* Dark section product items */
+section + section .product-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-shadow: none;
+}
+
+/* Responsive styles for products */
+@media (max-width: 768px) {
+    .product-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Section navigation */
+.section-nav {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    margin-top: auto;
+    padding-top: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation buttons */
+.section-nav a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 6px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.85em;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.section-nav a span {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 1em;
+}
+
+.section-nav a:hover {
+    background-color: transparent;
+    border-color: #3498db;
+    color: #3498db;
+}
+
+/* Dark section navigation */
+section + section .section-nav, 
+section + section + section + section .section-nav {
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+section + section .section-nav a:hover, 
+section + section + section + section .section-nav a:hover {
+    color: white;
+    border-color: white;
+}
+
+/* Ensure sections take up full viewport height */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive styles for section navigation */
+@media (max-width: 768px) {
+    .section-nav {
+        padding-top: 5px;
+    }
+    
+    .section-nav a {
+        margin: 3px auto;
+        width: 60%;
+        max-width: 200px;
+        padding: 4px 10px;
+    }
+}
+
+/* Contact information styles */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: nowrap;
+}
+
+/* Contact item base styles */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact items in the two-column layout */
+.contact-info .contact-item {
+    width: 40%;
+    margin: 0;
+    padding: 15px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+/* Full-width contact item */
+.contact-item.full-width {
+    width: 95%;
+    margin: 20px 0;
+}
+
+/* Contact icon */
+.contact-icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+/* Contact text */
+.contact-text {
+    flex: 1;
+}
+
+.contact-text h3 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.contact-text p {
+    margin: 5px 0;
+    color: #333;
+    text-shadow: none;
+    font-size: 0.95em;
+}
+
+.contact-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Dark section contact items */
+section + section + section + section .contact-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-shadow: none;
+}
+
+section + section + section + section .contact-icon {
+    color: #3498db;
+}
+
+section + section + section + section .contact-text h3 {
+    color: #2c3e50;
+}
+
+/* Responsive styles for contact information */
+@media (max-width: 768px) {
+    .contact-item {
+        width: 100%;
+        min-width: auto;
+        margin: 15px 0;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        margin: 15px 0;
+    }
+}
+
+/* Adjust contact items for two-column layout */
+@media (min-width: 769px) {
+    .contact-info {
+        flex-direction: row;
+    }
+    
+    .contact-info .contact-item:first-child {
+        margin-right: 2%;
+    }
+    
+    .contact-info .contact-item:last-child {
+        margin-left: 2%;
+    }
+}
+
+/* About section container */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+/* About image */
+.about-image {
+    flex: 1;
+    max-width: 45%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+/* About text */
+.about-text {
+    background-color: transparent;
+    flex: 1;
+    border: 0px;
+    box-shadow: none;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.about-text p {
+    background-color: transparent;
+    margin: 0 0 10px 0;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive styles for about section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 5px;
+        margin: 5px 0;
+    }
+    
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .about-text,
+    .about-text p {
+        text-align: left; /* Maintain left alignment on mobile */
+    }
+}
+
+/* Specialty container for home section */
+.specialty-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+    background-color: #d6eaf8;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #a9cce3;
+}
+
+/* Specialty text - now on the left */
+.specialty-text {
+    flex: 1;
+    background-color: transparent;
+    padding: 25px;
+    box-shadow: none;
+    text-align: left;
+    order: 1;
+}
+
+.specialty-text h3 {
+    color: #2980b9;
+    margin: 0 0 15px 0;
+}
+
+.specialty-text p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Specialty image - now on the right */
+.specialty-image {
+    flex: 1;
+    max-width: 50%;
+    height: 100%;
+    overflow: hidden;
+    order: 2;
+}
+
+.specialty-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive styles for specialty section */
+@media (max-width: 768px) {
+    .specialty-container {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    
+    .specialty-image {
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    .specialty-text {
+        text-align: center;
+    }
+}
+
+/* Product container spacing */
+.product-container {
+    margin: 40px 0;
+}
+
+/* About container spacing */
+.about-container {
+    margin: 10px 0;
+    gap: 10px;
+}
+
+/* Specialty container spacing */
+.specialty-container {
+    margin: 40px 0;
+}
+
+/* Contact info spacing */
+.contact-info {
+    margin: 0;
+}
+
+.contact-item.full-width {
+    margin: 20px 0;
+}
+
+/* Service list spacing */
+section ul {
+    margin: 40px 0;
+}
+
+/* Section navigation spacing */
+.section-nav {
+    margin: 0;
+    padding: 0px;
+    border: 0;
+}
+
+/* Section navigation after about */
+section#about .section-nav {
+    margin-top: 10px;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+    section > div > * {
+        margin-bottom: 30px;
+    }
+    
+    .product-container,
+    .about-container,
+    .specialty-container,
+    .contact-info,
+    .contact-item.full-width,
+    section ul {
+        margin: 30px 0;
+    }
+    
+    .section-nav {
+        padding-top: 10;
+    }
+}
+
+/* Hours container spacing */
+.hours-container {
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        margin: 5px 0;
+        gap: 5px;
+    }
+    
+    .contact-info {
+        margin: 0;
+    }
+    
+    .contact-item.full-width {
+        margin: 15px 0;
+    }
+    
+    .about-text p {
+        margin: 0 0 5px 0;
+    }
+}

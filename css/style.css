@@ -20,7 +20,7 @@ header {
     background-color: transparent;
     background-image: 
         linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
-        url('../images/header-bg.jpg');
+        url('../img/header-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -169,7 +169,7 @@ section:nth-child(odd) {
 section + section {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        url('../img/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -186,7 +186,7 @@ section + section + section {
 section + section + section + section {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        url('../img/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -700,7 +700,6 @@ section + section + section + section .contact-text h3 {
 @media (max-width: 768px) {
     .contact-item {
         width: 100%;
-        min-width: auto;
         margin: 15px 0;
     }
     
@@ -840,7 +839,7 @@ section + section + section + section .contact-text h3 {
 .specialty-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     display: block;
 }
 
